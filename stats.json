@@ -1,9 +1,5 @@
 {
   "assetsByChunkName": {
-    "path---my-second-post": [
-      "path---my-second-post-54f1824268a04e23c4ed.js",
-      "path---my-second-post-54f1824268a04e23c4ed.js.map"
-    ],
     "component---src-pages-index-js": [
       "component---src-pages-index-js-b2e93b72c9432f582a2c.js",
       "component---src-pages-index-js-b2e93b72c9432f582a2c.js.map"
@@ -24,17 +20,9 @@
       "component---src-layouts-index-js-739f077b69beb3035c3f.js",
       "component---src-layouts-index-js-739f077b69beb3035c3f.js.map"
     ],
-    "path---hi-folks": [
-      "path---hi-folks-c8f3f2385ed455846ce5.js",
-      "path---hi-folks-c8f3f2385ed455846ce5.js.map"
-    ],
     "path---index": [
-      "path---index-2713c5be41a140864763.js",
-      "path---index-2713c5be41a140864763.js.map"
-    ],
-    "path---hello-world": [
-      "path---hello-world-3c7636db4324e028d881.js",
-      "path---hello-world-3c7636db4324e028d881.js.map"
+      "path---index-f0ebfd51aafb63b345fe.js",
+      "path---index-f0ebfd51aafb63b345fe.js.map"
     ],
     "component---src-pages-404-js": [
       "component---src-pages-404-js-4503918ea3a16cfcdb75.js",
@@ -54,10 +42,14 @@
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
     ],
+    "path---what-adt-00": [
+      "path---what-adt-00-40744f147da144151366.js",
+      "path---what-adt-00-40744f147da144151366.js.map"
+    ],
     "app": [
-      "app-7fa6556b9590eaac3d47.js",
+      "app-2aa19986fc65b1927063.js",
       "build-js-styles.css",
-      "app-7fa6556b9590eaac3d47.js.map",
+      "app-2aa19986fc65b1927063.js.map",
       "build-js-styles.css.map"
     ],
     "path---404": [
