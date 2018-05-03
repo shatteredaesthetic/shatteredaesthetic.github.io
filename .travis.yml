@@ -7,9 +7,31 @@ os:
 node_js:
   - "node"
   - "lts/*"
-  - "7"
-  - "8"
+  - "9"
+
+cache:
+  directories:
+    - ~/.npm
+
+notifications:
+  email:
+    recipients:
+      - chen@huchen.me
+    on_success: always
+    on_failure: always
+
+git:
+  depth: 3
 
 script:
-  - npm install
-  - npm run lint
+  - npm run build
+  
+deploy:
+  provider: pages
+  skip-cleanup: true
+  keep-history: true
+  github-token: $GITHUB_TOKEN
+  local-dir: public
+  target-branch: master
+  on:
+    branch: develop
