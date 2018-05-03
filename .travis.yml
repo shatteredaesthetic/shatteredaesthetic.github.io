@@ -16,7 +16,7 @@ cache:
 notifications:
   email:
     recipients:
-      - chen@huchen.me
+      - jason.polhemus@shatteredaesthetic.com
     on_success: always
     on_failure: always
 
@@ -25,7 +25,7 @@ git:
 
 script:
   - npm run build
-  
+
 deploy:
   provider: pages
   skip-cleanup: true
