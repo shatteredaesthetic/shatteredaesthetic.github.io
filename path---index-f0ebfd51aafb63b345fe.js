@@ -1,2 +1,0 @@
-webpackJsonp([0x81b8806e4260],{508:function(t,e){t.exports={data:{site:{siteMetadata:{title:"Gatsby Starter Blog"}},allMarkdownRemark:{edges:[{node:{excerpt:"Part 0, in which we justify ourselves… In the beginning, there was… you know what? No. No, I’m going to avoid all the easy ‘hello world…",fields:{slug:"/what-adt-00/"},frontmatter:{date:"02 May, 2018",title:"What the ADT 00 - Introductions All Around"}}}]}},pathContext:{}}}});
-//# sourceMappingURL=path---index-f0ebfd51aafb63b345fe.js.map
