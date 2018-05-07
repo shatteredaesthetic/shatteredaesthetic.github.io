@@ -1,6 +1,6 @@
 ---
 title: What the ADT 01 - Getting to the Heart of Things
-date: "2018-05-03T17:00:00.284Z"
+date: "2018-05-06T21:18:15.284Z"
 ---
 
 ## Part 1: Let's Get Logical...Logical
