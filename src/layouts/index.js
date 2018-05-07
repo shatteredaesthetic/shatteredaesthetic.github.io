@@ -17,7 +17,7 @@ class Template extends React.Component {
       header = (
         <h1
           style={{
-            ...scale(1.5),
+            ...scale(1.3),
             marginBottom: rhythm(1.5),
             marginTop: 0,
           }}
@@ -30,7 +30,8 @@ class Template extends React.Component {
             }}
             to={'/'}
           >
-            (shatteredaesthetic) broken code.
+            <span style={{ color: '#3a72b8' }}>(shatteredaesthetic)</span>
+            <div>broken code.</div>
           </Link>
         </h1>
       )
@@ -51,7 +52,8 @@ class Template extends React.Component {
             }}
             to={'/'}
           >
-            (shatteredaesthetic) broken code.
+            <span style={{ color: '#3a72b8' }}>(shatteredaesthetic)</span>
+            <div>broken code.</div>
           </Link>
         </h1>
       )
@@ -61,7 +63,7 @@ class Template extends React.Component {
         style={{
           marginLeft: 'auto',
           marginRight: 'auto',
-          maxWidth: rhythm(24),
+          maxWidth: rhythm(27),
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >

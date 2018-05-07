@@ -30,7 +30,14 @@ class Bio extends React.Component {
           Written by <strong>Jason Polhemus</strong> who lives and works in
           Atlanta building useful things and making beautiful sound, and hopes
           to relocate to Chicago soon.{' '}
-          <a href="https://twitter.com/digitalsthtcs">tweets</a>
+          <a
+            href="https://twitter.com/digitalsthtcs"
+            style={{
+              color: '#3a72b8',
+            }}
+          >
+            tweets
+          </a>
         </p>
       </div>
     )

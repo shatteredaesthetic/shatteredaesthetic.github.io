@@ -3,7 +3,7 @@ title: What the ADT 00 - Introductions All Around
 date: "2018-05-02T22:12:03.284Z"
 ---
 
-### Part 0, in which we justify ourselves...
+## Part 0, in which we justify ourselves...
 
 In the beginning, there was... you know what? No. No, I'm going to avoid all the easy 'hello world' references and creation-mythologizing. This is just a programming blog, after all. You're welcome.
 

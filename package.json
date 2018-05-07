@@ -26,6 +26,7 @@
     "lodash": "^4.17.5",
     "typeface-merriweather": "0.0.43",
     "typeface-montserrat": "0.0.43",
+    "typography-theme-elk-glen": "^0.16.9",
     "typography-theme-wordpress-2016": "^0.15.10"
   },
   "devDependencies": {
