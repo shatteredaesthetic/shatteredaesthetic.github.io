@@ -1,9 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: '(shatteredaesthetic) broken code.',
+    title: '(shatteredaesthetic)',
+    blogTitle: '[codify the chaotic cipher]',
     author: 'Jason Polhemus',
-    description: 'A programming blog to show what functinal can do.',
+    description: 'what can functional do for you?',
     siteUrl: 'https://shatteredaesthetic.github.io',
+    twitterUrl: 'https://twitter.com/digitalsthtcs',
   },
   plugins: [
     {
@@ -11,6 +13,13 @@ module.exports = {
       options: {
         path: `${__dirname}/src/pages`,
         name: 'pages',
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content`,
+        name: 'markdown-pages',
       },
     },
     {
@@ -29,7 +38,12 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
-          'gatsby-remark-prismjs',
+          {
+            resolve: 'gatsby-remark-prismjs',
+            options: {
+              classPrefix: 'language-',
+            },
+          },
           'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
         ],
@@ -46,6 +60,7 @@ module.exports = {
     `gatsby-plugin-feed`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-styled-components',
     {
       resolve: 'gatsby-plugin-typography',
       options: {

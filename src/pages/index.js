@@ -1,70 +1,85 @@
 import React from 'react'
-import Link from 'gatsby-link'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
+import styled from 'styled-components'
 
-import Bio from '../components/Bio'
-import { rhythm } from '../utils/typography'
+const Wrapper = styled.section`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  max-width: 120rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+`
 
-class BlogIndex extends React.Component {
+const Home = styled.div`
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  h1 {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  h2 {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+      font-size: 2rem;
+    }
+  }
+  ul {
+    list-style: none;
+    margin: 3rem 0 1rem 0;
+    padding: 0;
+    li {
+      display: inline;
+      position: relative;
+      a {
+        text-transform: uppercase;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        font-size: 1.6rem;
+        @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+          font-size: 1.4rem;
+        }
+      }
+    }
+  }
+`
+
+class HomePage extends React.Component {
   render() {
-    const siteTitle = get(this, 'props.data.site.siteMetadata.title')
-    const posts = get(this, 'props.data.allMarkdownRemark.edges')
+    const { title, description, author } = get(
+      this,
+      'props.data.site.siteMetadata'
+    )
 
     return (
-      <div>
-        <Helmet title={siteTitle} />
-        <Bio />
-        {posts.map(({ node }) => {
-          const title = get(node, 'frontmatter.title') || node.fields.slug
-          return (
-            <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link
-                  style={{
-                    boxShadow: 'none',
-                    color: '#3a72b8',
-                  }}
-                  to={node.fields.slug}
-                >
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p dangerouslySetInnerHTML={{ __html: node.excerpt }} />
-            </div>
-          )
-        })}
-      </div>
+      <Wrapper>
+        <Helmet title={title} />
+        <Home>
+          <h1>{title}</h1>
+          <h2>site by {author}</h2>
+          <hr />
+          <span>{description}</span>
+        </Home>
+      </Wrapper>
     )
   }
 }
 
-export default BlogIndex
+export default HomePage
 
 export const pageQuery = graphql`
   query IndexQuery {
     site {
       siteMetadata {
         title
-      }
-    }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "DD MMMM, YYYY")
-            title
-          }
-        }
+        description
+        author
       }
     }
   }

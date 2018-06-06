@@ -1,77 +1,47 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import styled, { injectGlobal } from 'styled-components'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
-import { rhythm, scale } from '../utils/typography'
+import { theme, fgColor } from '../utils/theme'
+require('prismjs/themes/prism-okaidia.css')
 
-class Template extends React.Component {
-  render() {
-    const { location, children } = this.props
-    let header
+injectGlobal`${theme}`
 
-    let rootPath = `/`
-    if (typeof __PREFIX_PATHS__ !== `undefined` && __PREFIX_PATHS__) {
-      rootPath = __PATH_PREFIX__ + `/`
+const Wrapper = styled.main`
+  min-height: 100vh;
+  width: 85vw;
+  display: grid;
+  grid-template-rows: 50px 1fr 50px;
+`
+
+const Content = styled.div`
+  article {
+    header {
+      margin-top: 3.2rem;
+      margin-bottom: 3.2rem;
+      h1,
+      h2 {
+        margin: 0;
+      }
+      h2 {
+        margin-top: 1rem;
+        font-size: 1.8rem;
+        color: ${fgColor};
+        @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+          font-size: 1.6rem;
+        }
+      }
     }
-
-    if (location.pathname === rootPath) {
-      header = (
-        <h1
-          style={{
-            ...scale(1.3),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-            to={'/'}
-          >
-            <span style={{ color: '#3a72b8' }}>(shatteredaesthetic)</span>
-            <div>broken code.</div>
-          </Link>
-        </h1>
-      )
-    } else {
-      header = (
-        <h1
-          style={{
-            fontFamily: 'Montserrat, sans-serif',
-            marginTop: 0,
-            marginBottom: rhythm(-1),
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: 'none',
-              textDecoration: 'none',
-              color: 'inherit',
-            }}
-            to={'/'}
-          >
-            <span style={{ color: '#3a72b8' }}>(shatteredaesthetic)</span>
-            <div>broken code.</div>
-          </Link>
-        </h1>
-      )
-    }
-    return (
-      <div
-        style={{
-          marginLeft: 'auto',
-          marginRight: 'auto',
-          maxWidth: rhythm(27),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        {header}
-        {children()}
-      </div>
-    )
   }
-}
+`
+
+const Template = ({ children }) => (
+  <Wrapper>
+    <Header />
+    <Content>{children()}</Content>
+    <Footer />
+  </Wrapper>
+)
 
 export default Template

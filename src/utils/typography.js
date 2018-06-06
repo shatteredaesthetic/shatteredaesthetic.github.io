@@ -1,15 +1,6 @@
 import Typography from 'typography'
-import ElkGlen from 'typography-theme-elk-glen'
 
-ElkGlen.overrideThemeStyles = () => ({
-  'a.gatsby-resp-image-link': {
-    boxShadow: 'none',
-  },
-})
-
-delete ElkGlen.googleFonts
-
-const typography = new Typography(ElkGlen)
+const typography = new Typography()
 
 // Hot reload typography in development.
 if (process.env.NODE_ENV !== 'production') {

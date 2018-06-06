@@ -1,5 +1,6 @@
 ---
-title: What the ADT 01 - Getting to the Heart of Things
+path: "/what-the-adt-01"
+title: "What the ADT 01 - Getting to the Heart of Things"
 date: "2018-05-06T21:18:15.284Z"
 ---
 

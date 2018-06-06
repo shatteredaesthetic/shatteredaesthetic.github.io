@@ -1,5 +1,6 @@
 ---
-title: What the ADT 00 - Introductions All Around
+path: "/what-the-adt-00"
+title: "What the ADT 00 - Introductions All Around"
 date: "2018-05-02T22:12:03.284Z"
 ---
 
