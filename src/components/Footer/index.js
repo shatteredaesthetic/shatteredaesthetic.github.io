@@ -21,7 +21,7 @@ const Container = styled.section`
 export default () => (
   <Wrapper>
     <Container>
-      `© 2018 ∙ Powered by `<Link to="https://www.gatsbyjs.org/">Gatsbyjs</Link>
+      © 2018 ∙ Powered by ∙<Link to="https://www.gatsbyjs.org/">Gatsbyjs</Link>∙
     </Container>
   </Wrapper>
 )

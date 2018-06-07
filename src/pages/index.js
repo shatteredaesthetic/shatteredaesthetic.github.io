@@ -18,6 +18,7 @@ const Home = styled.div`
   text-align: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
   h1 {
     margin-top: 2rem;
     margin-bottom: 0.5rem;
@@ -61,6 +62,14 @@ class HomePage extends React.Component {
       <Wrapper>
         <Helmet title={title} />
         <Home>
+          <iframe
+            src="https://giphy.com/embed/IBGk6rXvzVb0c"
+            width="300"
+            height="299"
+            frameBorder="0"
+            class="giphy-embed"
+            allowFullScreen
+          />
           <h1>{title}</h1>
           <h2>site by {author}</h2>
           <hr />

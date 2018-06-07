@@ -22,6 +22,7 @@ const Wrapper = styled.section`
   width: 100%;
   padding-left: 2rem;
   padding-right: 2rem;
+  font-size: 2em;
   ul {
     margin: 3.2rem 0 3.2rem 0;
     list-style: none;

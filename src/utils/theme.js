@@ -24,10 +24,10 @@ export const theme = css`
     color: ${fgColor};
     background-color: ${bgColor};
     font-family: 'Fira Mono', monospace;
-    font-size: 1.6em;
+    font-size: 2em;
     font-weight: 400;
     letter-spacing: 0.0625em;
-    line-height: 1.8em;
+    line-height: 2.2em;
     @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
       font-size: 1.4em;
       line-height: 1.6em;

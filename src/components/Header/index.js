@@ -18,11 +18,11 @@ const Container = styled.section`
 
 const Wrapper = styled.nav`
   display: flex;
-  height: 3rem;
+  height: 5rem;
   width: 100%;
   a {
     display: inline;
-    font-size: 1.6rem;
+    font-size: 2.2rem;
     text-transform: uppercase;
     line-height: 6rem;
     letter-spacing: 0.1rem;

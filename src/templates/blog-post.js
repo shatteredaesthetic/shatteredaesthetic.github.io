@@ -43,6 +43,7 @@ const List = styled.ul`
 `
 
 const Content = styled.div`
+  font-family: Helvetica, sans-serif;
   code {
     font-size: 1.2rem;
   }
