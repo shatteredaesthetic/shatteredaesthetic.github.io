@@ -27,9 +27,8 @@ export default () => (
   <Wrapper>
     <Pic src={profilePic} alt={`Jason Polhemus`} />
     <p>
-      Written by <strong>Jason Polhemus</strong> who lives and works in Atlanta
-      building useful things and making beautiful sound, and hopes to relocate
-      to Chicago soon.{' '}
+      Written by <strong>Jason Polhemus</strong> who lives and works in Chicago
+      building useful things and making beautiful sound.{' '}
       <Link to="https://twitter.com/digitalsthtcs">tweets</Link>
     </p>
   </Wrapper>

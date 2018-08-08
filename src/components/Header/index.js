@@ -3,6 +3,7 @@ import GatsbyLink from 'gatsby-link'
 import styled from 'styled-components'
 import get from 'lodash/get'
 import { complement } from 'polished'
+import { Toolbar, NavLink } from 'rebass'
 import { linkColor } from '../../utils/theme'
 
 const Container = styled.section`
@@ -66,9 +67,18 @@ export default () => (
           <Link to="/blog">Blog</Link>
         </li>
         <li>
+          <Link to="/shows">Shows</Link>
+        </li>
+        <li>
           <Link to="/about">About</Link>
         </li>
       </ul>
     </Container>
   </Wrapper>
 )
+
+// <Toolbar bg={'white'} color={'black'}>
+//             <NavLink>(shttrdsthtc)</NavLink>
+//             <NavLink ml="auto">Blog</NavLink>
+//             <NavLink>About</NavLink>
+//           </Toolbar>

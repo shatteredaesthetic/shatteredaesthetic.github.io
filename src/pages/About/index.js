@@ -50,12 +50,12 @@ const Bio = () => (
       <Pic src={profilePic} alt={`Jason Polhemus`} />
       <p>
         This site is a creation by me, <strong>Jason Polhemus</strong>. (That's
-        me up there, all bearded and upside-down. Adorable.) I currently live in
-        Atlanta, where I hold down two jobs, the first of which is both{' '}
-        <strong>sound engineer</strong> and <strong>sound designer</strong> for
-        theaters around town. The second job is{' '}
-        <strong>electrical engineer</strong>, building 3-D printers and
-        accessories.{' '}
+        me up there, all bearded and upside-down. Adorable.) I previously lived
+        in Atlanta, where I held down two jobs (one I currently hold), the first
+        of which is both <strong>sound engineer</strong> and{' '}
+        <strong>sound designer</strong> for theaters around town. The second job
+        was <strong>electrical engineer</strong> at a company building 3-D
+        printers and accessories.{' '}
       </p>
       <p>
         {' '}
@@ -92,11 +92,12 @@ const Bio = () => (
         theory, process philosophy, and GCODE.
       </p>
       <p>
-        Long story short, my wife and I are hoping to move to <i>Chicago</i>{' '}
-        soon, so I can transition to programming full-time. Fingers crossed; I'm
-        pretty excited about the possibilities. If you like what you see here
-        (or think I'm a pretty cool guy), and know of a gig in the Chicago area
-        (or remote), email me and let me know. Or just say hi!{' '}
+        As an update to this, my wife and I have moved up to Chicago, IL from
+        Atlanta, GA. I am actively seeking to transition to programming
+        full-time. Fingers crossed; I'm pretty excited about the possibilities.
+        If you like what you see here (or think I'm a pretty cool guy), and know
+        of a gig in the Chicago area (or remote), email me and let me know. Or
+        just say hi! I don't bite.{' '}
       </p>
       <List>
         <li>

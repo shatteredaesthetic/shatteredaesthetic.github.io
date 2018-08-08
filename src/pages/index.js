@@ -2,6 +2,7 @@ import React from 'react'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
 import styled from 'styled-components'
+import { Image } from 'rebass'
 
 const Wrapper = styled.section`
   display: flex;
@@ -51,25 +52,18 @@ const Home = styled.div`
   }
 `
 
-class HomePage extends React.Component {
+export default class HomePage extends React.Component {
   render() {
     const { title, description, author } = get(
-      this,
-      'props.data.site.siteMetadata'
+      this.props,
+      'data.site.siteMetadata'
     )
 
     return (
       <Wrapper>
         <Helmet title={title} />
         <Home>
-          <iframe
-            src="https://giphy.com/embed/IBGk6rXvzVb0c"
-            width="300"
-            height="299"
-            frameBorder="0"
-            class="giphy-embed"
-            allowFullScreen
-          />
+          <Image src="https://media.giphy.com/media/IBGk6rXvzVb0c/giphy.gif" />
           <h1>{title}</h1>
           <h2>site by {author}</h2>
           <hr />
@@ -79,8 +73,6 @@ class HomePage extends React.Component {
     )
   }
 }
-
-export default HomePage
 
 export const pageQuery = graphql`
   query IndexQuery {
