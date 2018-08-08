@@ -1,56 +1,68 @@
 {
   "assetsByChunkName": {
     "component---src-pages-about-index-js": [
-      "component---src-pages-about-index-js-2614f1baba9ec2232371.js",
-      "component---src-pages-about-index-js-2614f1baba9ec2232371.js.map"
+      "component---src-pages-about-index-js-643023e491bcddd7210b.js",
+      "component---src-pages-about-index-js-643023e491bcddd7210b.js.map"
     ],
     "path---what-the-adt-00": [
       "path---what-the-adt-00-8cd7b95619aaa94a811b.js",
       "path---what-the-adt-00-8cd7b95619aaa94a811b.js.map"
     ],
     "component---src-pages-index-js": [
-      "component---src-pages-index-js-2b644e3dca0e9b5138de.js",
-      "component---src-pages-index-js-2b644e3dca0e9b5138de.js.map"
+      "component---src-pages-index-js-f1068d7c506f1c6532ce.js",
+      "component---src-pages-index-js-f1068d7c506f1c6532ce.js.map"
     ],
     "path---blog": [
-      "path---blog-d31344d0298577b8fe3d.js",
-      "path---blog-d31344d0298577b8fe3d.js.map"
+      "path---blog-28993f1dedd484de2f5a.js",
+      "path---blog-28993f1dedd484de2f5a.js.map"
     ],
     "path---": [
       "path----557518bd178906f8d58a.js",
       "path----557518bd178906f8d58a.js.map"
+    ],
+    "component---src-pages-shows-index-js": [
+      "component---src-pages-shows-index-js-2652bc14eca56b81ac16.js",
+      "component---src-pages-shows-index-js-2652bc14eca56b81ac16.js.map"
+    ],
+    "path---shows": [
+      "path---shows-77a8ba8d4c264a1d3928.js",
+      "path---shows-77a8ba8d4c264a1d3928.js.map"
+    ],
+    "path---projects": [
+      "path---projects-a9a8904bb83575400b91.js",
+      "path---projects-a9a8904bb83575400b91.js.map"
     ],
     "component---node-modules-gatsby-plugin-offline-app-shell-js": [
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js",
       "component---node-modules-gatsby-plugin-offline-app-shell-js-5c4c5a0f7af9dc69d6d7.js.map"
     ],
     "component---src-templates-blog-post-js": [
-      "component---src-templates-blog-post-js-6a038d1fa52724bd4805.js",
-      "component---src-templates-blog-post-js-6a038d1fa52724bd4805.js.map"
+      "component---src-templates-blog-post-js-ba495ac5b447f872b256.js",
+      "component---src-templates-blog-post-js-ba495ac5b447f872b256.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-03f143a4842063a545b1.js",
-      "component---src-layouts-index-js-03f143a4842063a545b1.js.map"
+      "component---src-layouts-index-js-40d0a2dab60c18c63a5f.js",
+      "component---src-layouts-index-js-40d0a2dab60c18c63a5f.js.map"
     ],
     "path---index": [
       "path---index-82467519f06429106968.js",
       "path---index-82467519f06429106968.js.map"
     ],
     "component---src-pages-blog-index-js": [
-      "component---src-pages-blog-index-js-4cc744f0f1eb71fa8bd0.js",
-      "component---src-pages-blog-index-js-4cc744f0f1eb71fa8bd0.js.map"
+      "component---src-pages-blog-index-js-9a8a58fba5e6a995bd44.js",
+      "component---src-pages-blog-index-js-9a8a58fba5e6a995bd44.js.map"
     ],
     "component---src-pages-404-js": [
       "component---src-pages-404-js-4503918ea3a16cfcdb75.js",
       "component---src-pages-404-js-4503918ea3a16cfcdb75.js.map"
     ],
     "commons": [
-      "commons-e20b487bffc32756e758.js",
-      "commons-e20b487bffc32756e758.js.map"
+      "commons-971d228e145f59af702e.js",
+      "commons-971d228e145f59af702e.js.map"
     ],
     "path---what-the-adt-03": [
-      "path---what-the-adt-03-c154a3e99739efd61502.js",
-      "path---what-the-adt-03-c154a3e99739efd61502.js.map"
+      "path---what-the-adt-03-e039bd3d35a280c8e24e.js",
+      "path---what-the-adt-03-e039bd3d35a280c8e24e.js.map"
     ],
     "path---404-html": [
       "path---404-html-a0e39f21c11f6a62c5ab.js",
@@ -60,6 +72,10 @@
       "path---what-the-adt-01-0f5250cbaa09d4385c47.js",
       "path---what-the-adt-01-0f5250cbaa09d4385c47.js.map"
     ],
+    "component---src-pages-projects-index-js": [
+      "component---src-pages-projects-index-js-4c2390a7a719f4fab92f.js",
+      "component---src-pages-projects-index-js-4c2390a7a719f4fab92f.js.map"
+    ],
     "path---offline-plugin-app-shell-fallback": [
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js",
       "path---offline-plugin-app-shell-fallback-a0e39f21c11f6a62c5ab.js.map"
@@ -68,10 +84,14 @@
       "path---what-the-adt-02-d29959f47e03c380148a.js",
       "path---what-the-adt-02-d29959f47e03c380148a.js.map"
     ],
+    "path---what-the-adt-04": [
+      "path---what-the-adt-04-77d6e1a70f9b2aeb91e6.js",
+      "path---what-the-adt-04-77d6e1a70f9b2aeb91e6.js.map"
+    ],
     "app": [
-      "app-2d1e735fa5ff839f7431.js",
+      "app-89e1d9318a39c10c7c85.js",
       "build-js-styles.css",
-      "app-2d1e735fa5ff839f7431.js.map",
+      "app-89e1d9318a39c10c7c85.js.map",
       "build-js-styles.css.map"
     ],
     "path---404": [
