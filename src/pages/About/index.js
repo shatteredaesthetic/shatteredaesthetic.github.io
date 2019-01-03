@@ -92,12 +92,12 @@ const Bio = () => (
         theory, process philosophy, and GCODE.
       </p>
       <p>
-        As an update to this, my wife and I have moved up to Chicago, IL from
-        Atlanta, GA. I am actively seeking to transition to programming
-        full-time. Fingers crossed; I'm pretty excited about the possibilities.
-        If you like what you see here (or think I'm a pretty cool guy), and know
-        of a gig in the Chicago area (or remote), email me and let me know. Or
-        just say hi! I don't bite.{' '}
+        Update: My wife and I have moved up to Chicago, IL from Atlanta, GA. I
+        am actively seeking to transition to programming full-time. Fingers
+        crossed; I'm pretty excited about the possibilities. If you like what
+        you see here (or think I'm a pretty cool guy), and know of a gig in the
+        Chicago area (or remote), email me and let me know. Or just say hi! I
+        don't bite.{' '}
       </p>
       <List>
         <li>
@@ -106,8 +106,10 @@ const Bio = () => (
         <li>
           <Link href="mailto:jason.polhemus@shatteredaesthetic.com">Email</Link>
         </li>
+        //{' '}
         <li>
-          <Link href="https://twitter.com/digitalsthtcs">Twitter</Link>
+          // <Link href="https://twitter.com/digitalsthtcs">Twitter</Link>
+          //{' '}
         </li>
       </List>
     </Container>

@@ -3,18 +3,25 @@ import Helmet from 'react-helmet'
 import styled from 'styled-components'
 import { Container, Flex, BackgroundImage, Panel, Box } from 'rebass'
 
-const Projects = props => {
-  const projects = props.data.allProjectsJson.edges
-}
-
 export default class ProjectPage extends React.Component {
   constructor(props) {
     super(props)
+    this.state = {
+      visible: null,
+    }
   }
 
   getData() {
     const { data } = this.props
     return data.projects.edges.map(p => p.node)
+  }
+
+  showPanel(idx) {
+    this.setState({ visible: idx })
+  }
+
+  hidePanel() {
+    this.setState({ visible: null })
   }
 
   render() {
@@ -24,7 +31,12 @@ export default class ProjectPage extends React.Component {
       <Container>
         <Flex flexWrap="wrap">
           {projects.map((prj, i) => (
-            <Box key={`prj-${i}`} width={1 / 2}>
+            <Box
+              key={`prj-${i}`}
+              width={1 / 2}
+              onMouseEnter={() => this.showPanel(i)}
+              onMouseLeave={() => this.hidePanel()}
+            >
               <BackgroundImage src={prj.pic} />
               <Panel>
                 <Panel.Header>{prj.title}</Panel.Header>

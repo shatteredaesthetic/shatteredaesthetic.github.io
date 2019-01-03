@@ -43,6 +43,14 @@ const Cont = styled(Container)`
   overflow: scroll;
 `
 
+const Disclaimer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  color: #0033e7;
+`
+
 // const designCols = [
 //   {
 //     Header: 'Title',
@@ -157,6 +165,7 @@ export default class ShowPage extends React.Component {
             ))}
           </Container>
         </Carousel>
+        <Disclaimer>partial list of shows.</Disclaimer>
       </Container>
     )
   }

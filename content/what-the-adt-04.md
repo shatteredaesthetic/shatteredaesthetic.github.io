@@ -209,4 +209,4 @@ main(defaultCfg).run()
 
 ### Conclusions
 
-We shuffled some things around, had to make more changes than we previously have had to, but we're now inching toward an interesting game. But we can guess forever right now. We're guaranteed to win through sheer determination. We should change that. Next time we'll limit the number of guesses in a game. Stay tuned!
+We shuffled some things around, had to make more changes than we previously have had to, but we're now inching toward an interesting game. But we can guess forever right now. We're guaranteed to win through sheer determination. We should change that. Next time we'll take a break from the javascript, and try our hand at rewriting this is a functional language: purescript! I'm excited for the opportunity to try this language out. Stay tuned!
