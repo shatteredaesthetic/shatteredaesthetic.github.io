@@ -1,7 +1,7 @@
 ---
-path: "/what-the-adt-p01"
-title: "What the ADT Purescript 01 - Trying our Hand at a Real FP"
-date: "2018-10-06T21:34:13.432Z"
+path: '/what-the-adt-p01'
+title: 'What the ADT Purescript 01 - Trying our Hand at a Real FP'
+date: '2018-10-06T21:34:13.432Z'
 ---
 
 ## Purescript, Part 1: Up to speed
@@ -10,13 +10,13 @@ Here we are, again. I know, I know: it's been awhile - exactly what I didn't wha
 
 Anyway, I thought we'd get back into the swing of things by getting completely out of our swing - and getting out of our programming language. We've been jumping through some hoops to make our style work in javascript; perhaps it's time we tried our hand at a real programming language: something with a type system, with currying by default, with recursion. My choice is Purescript.
 
-___
+---
 
 Enough talk, let's begin. All purescript projects begin with declaring our module and importing some libraries (most importantly, the `Prelude`). Because our file is called `Main.purs`, our module is also called `Main`. Let's see it:
 
->Note: the purescript code samples are labeled as *haskell* so I can get come syntax highlighting. It makes it much easier to read the code, and they're close enough to make it work.
+> Note: the purescript code samples are labeled as _haskell_ so I can get come syntax highlighting. It makes it much easier to read the code, and they're close enough to make it work.
 
-*./src/Main.purs*
+_./src/Main.purs_
 
 ```haskell
 module Main where
@@ -24,30 +24,28 @@ module Main where
 import Prelude
 ```
 
-
 Let's start by defining some types. We're thinking forward to future functionality, so we're going to abandon our `ReaderT` for something a little more beefy: an `RWS` monad. This is basically a `Reader`, a `Writer`, and a `State` monad, all rolled up into one big ball of useful functionality.
 
-*./src/Main.purs*
+_./src/Main.purs_
 
 ```haskell
 newtype GameEnvironment = GameEnvironment
   { low :: Int, high :: Int, tolerance :: Int }
-  
+
 gameEnvironment :: Int -> Int -> Int -> GameEnvironment
 gameEnvironment l h tol =
   GameEnvironment { low: l, high: h, tolerance: tol }
-  
+
 data GameState = GameState Int
 
 type Log = Array String
 
 type Game = RWS GameEnvironment Log GameState
-
 ```
 
-We feed our `RWS` with and `env` for the `Reader`, a monoid for the `Writer`, and a type holding the state for the `State`. Our env is a newtype that holds a record containing the same three things that the `Config`<sup>*</sup> held in the javascript version: our `high` and `low` bounds, and the tolerance for our answer. Then we define a constructor function for our `GameEnvironment` type.
+We feed our `RWS` with and `env` for the `Reader`, a monoid for the `Writer`, and a type holding the state for the `State`. Our env is a newtype that holds a record containing the same three things that the `Config`<sup>\*</sup> held in the javascript version: our `high` and `low` bounds, and the tolerance for our answer. Then we define a constructor function for our `GameEnvironment` type.
 
-GameState is a sum type with one constructor, and the monoid we'll be using will be an `Array` or `Strings`.  With these we define our `Game` type as an `RWS` monad with the aforementioned type populating it. So far, so good. Now what?
+GameState is a sum type with one constructor, and the monoid we'll be using will be an `Array` of `Strings`. With these we define our `Game` type as an `RWS` monad with the aforementioned type populating it. So far, so good. Now what?
 
 I guess we can start with a function that will play the game. Let's call it `game`!
 
@@ -56,7 +54,7 @@ game :: Int -> Game (Maybe Int)
 game guess = do
 ```
 
-I'll stop here so I can explain this a bit. Our function will take an Int which is the guess from the player. It will return a `Game (Maybe Int)`, our monad that's been parameterized with a `Maybe Int`. I chose a `Maybe` so I could indicate when the guess was no good with a `Nothing`, (we don't return the error messages like before<sup>*</sup>...you'll see), and return the target with the winning guess. Who knows, maybe we'll do something cool with it in the future.
+I'll stop here so I can explain this a bit. Our function will take an Int which is the guess from the player. It will return a `Game (Maybe Int)`, our monad that's been parameterized with a `Maybe Int`. I chose a `Maybe` so I could indicate when the guess was no good with a `Nothing`, (we don't return the error messages like before<sup>\*</sup>...you'll see), and return the target with the winning guess. Who knows, maybe we'll do something cool with it in the future.
 
 The `do` is for Purescript's do-notation. Since monads allow us to define sequential computations, as can use do-notation as a syntactic sugar around all the `bind`ing we'd otherwise do (same as our `chain` function in javascriptland). I'll leave [this]() as a far better explanation than I have time to give here.
 
@@ -71,7 +69,7 @@ import Control.Monad.Writer.Class (tell)
 import Data.Maybe (Maybe(..))
 ```
 
-What have we got here? We need to grab `get` from `State`, `ask` from `Reader`, and `tell` from `Writer`, from their respective homes. We also get `Maybe` from it's home, making sure to add the `(..)` so we have acess to the constructors. We qualify our `Array` import, placing them under the namespace of `A`.
+What have we got here? We need to grab `get` from `State`, `ask` from `Reader`, and `tell` from `Writer`, from their respective homes. We also get `Maybe` from it's home, making sure to add the `(..)` so we have access to the constructors. We qualify our `Array` import, placing them under the namespace of `A`.
 
 Okay, let's continue:
 
@@ -80,12 +78,11 @@ game guess = do
   GameEnvironment env <- ask
   GameState target <- get
   logic guess env target
-
 ```
 
 Is...is that it? This will be a common reaction to porting this over. We had to provide a lot of infrastructure to do this in javascript, but purescript gives it to us for nothing!
 
-So, what's going on here? We're `ask`ing the `Reader` part of `Game` to get the environment, unwarpping the newtype. We do similar for the `target`, in the `State` part of `Game`, using `get` to obtain it, and unwrapping it. We feed these and our guess into `logic`, and that's where all the action is. Let's check it out:
+So, what's going on here? We're `ask`ing the `Reader` part of `Game` to get the environment, unwrapping the newtype. We do similar for the `target`, in the `State` part of `Game`, using `get` to obtain it, and unwrapping it. We feed these and our guess into `logic`, and that's where all the action is. Let's check it out:
 
 ```haskell
 logic :: Int -> { low :: Int, high :: Int, tolerance :: Int } -> Int -> Game (Maybe Int)
@@ -108,10 +105,10 @@ logic g { low: l, high: h, tolerance: tol } t
   | otherwise = do
     tell $ A.singleton $ "Close Enough! The number was " <> show t
     pure $ Just t
-    
+
 ```
 
-I know, right? Our three functions from before can be completely contained *within the guards of the function!* For each guard, we give the requisite message to the `Writer` part of `Game`'s monoid, and return a `Maybe Int`, containing either a `Nothing` in the case of a bad input or bad guess, or a `Just` containing the `target` in the case of a good guess.
+I know, right? Our three functions from before can be completely contained _within the guards of the function!_ For each guard, we give the requisite message to the `Writer` part of `Game`'s monoid, and return a `Maybe Int`, containing either a `Nothing` in the case of a bad input or bad guess, or a `Just` containing the `target` in the case of a good guess.
 
 Great, I guess it's time we started to worry about getting input, and returning output to the console. Let's start with something no purescript project is complete without: a `main` function.
 
@@ -181,11 +178,11 @@ If we did get a valid `Int`, we pass that `guess` into the `game` function, feed
 
 We're in the homestretch: there's one function we haven't touched yet, but...it's going to need some love. You see, we need to get input from the outside world, and that's a dangerous, scary place full of untyped things. Luckily, we can leverage javascript to make things happen for us.
 
->Quick side note: I stole this from `purescript-parseint`. Integrating that library kept breaking my project, and I didn't know why, so I figured I'd just copy it (and change it slightly). Thanks go out to [Athan Clark](https://github.com/athanclark) for the original!
+> Quick side note: I stole this from `purescript-parseint`. Integrating that library kept breaking my project, and I didn't know why, so I figured I'd just copy it (and change it slightly). Thanks go out to [Athan Clark](https://github.com/athanclark) for the original!
 
-Let's see the purescript first: 
+Let's see the purescript first:
 
-*./src/Data/Int/Parse.purs*
+_./src/Data/Int/Parse.purs_
 
 ```haskell
 module Data.Int.Parse (parseInt) where
@@ -209,7 +206,6 @@ parseInt s i =
     if isNaN x
       then Nothing
       else Just (round x)
-
 ```
 
 After our module declaration and imports, we define a `foreign import`. This is the function we are FFIing into in javascript. We'll define this in a moment. Let's take a lok at that Type:
@@ -224,7 +220,7 @@ Seems simple enough, if a little circular. Let's check our the javascript:
 
 ```js
 exports.unsafeParseInt = function unsafeParseInt(input, base) {
-  return parseInt(input, base);
+  return parseInt(input, base)
 }
 ```
 
@@ -238,7 +234,7 @@ import Data.Int.Parse (parseInt)
 
 Of course, after writing `parseInt`, I found `fromStringAs` paired with `decimal` from the `purescript-integers` package, as well as `read` from `purescript-read`. I'm going to use `fromStringAs` instead of my function. So, let's see the whole shebang, so we can marvel at the beautiful, smaller codebase:
 
-*./src/Main.purs*
+_./src/Main.purs_
 
 ```haskell
 module Main where
@@ -261,11 +257,11 @@ import Node.ReadLine as RL
 
 newtype GameEnvironment = GameEnvironment
   { low :: Int, high :: Int, tolerance :: Int }
-  
+
 gameEnvironment :: Int -> Int -> Int -> GameEnvironment
 gameEnvironment l h tol =
   GameEnvironment { low: l, high: h, tolerance: tol }
-  
+
 data GameState = GameState Int
 
 type Log = Array String
@@ -277,7 +273,7 @@ game guess = do
   GameEnvironment env <- ask
   GameState target <- get
   logic guess env target
-  
+
 logic :: Int -> { low :: Int, high :: Int, tolerance :: Int } -> Int -> Game (Maybe Int)
 logic g { low: l, high: h, tolerance: tol } t
   | g < l = do
@@ -298,7 +294,7 @@ logic g { low: l, high: h, tolerance: tol } t
   | otherwise = do
     tell $ A.singleton $ "Close Enough! The number was " <> show t
     pure $ Just t
-    
+
 runGame :: GameEnvironment -> GameState -> Effect Unit
 runGame env state = do
   interface <- RL.createConsoleInterface RL.noCompletion
@@ -328,7 +324,7 @@ runGame env state = do
   RL.prompt interface
 
   pure unit
-    
+
 main :: Effect Unit
 main = void do
   let env = gameEnvironment 1 100 3
@@ -340,7 +336,8 @@ Style is subjective, of course, but i must say: I think this looks much nicer an
 
 And that's a good place to stop, for now. Next time we're going to stick with our new purescript codebase, and inplement a limit to the guesses. This is fun and all, but, with infinite guesses, players will always eventually win. That's no fun! Let's get this game to be more fun!
 
-___
-___
+---
 
-<sup>* from the [javascript version](https://github.com/shatteredaesthetic/cipher-guess/tree/what-adt-04)</sup>
+---
+
+<sup>\* from the [javascript version](https://github.com/shatteredaesthetic/cipher-guess/tree/what-adt-04)</sup>

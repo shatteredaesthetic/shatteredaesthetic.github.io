@@ -106,11 +106,6 @@ const Bio = () => (
         <li>
           <Link href="mailto:jason.polhemus@shatteredaesthetic.com">Email</Link>
         </li>
-        //{' '}
-        <li>
-          // <Link href="https://twitter.com/digitalsthtcs">Twitter</Link>
-          //{' '}
-        </li>
       </List>
     </Container>
   </Wrapper>
