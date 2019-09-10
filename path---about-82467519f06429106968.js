@@ -1,2 +1,2 @@
-webpackJsonp([0xf927f8900006],{649:function(t,a){t.exports={data:{site:{siteMetadata:{title:"(shatteredaesthetic)",description:"what can functional do for you?",author:"Jason Polhemus"}}},pathContext:{}}}});
+webpackJsonp([0xf927f8900006],{650:function(t,a){t.exports={data:{site:{siteMetadata:{title:"(shatteredaesthetic)",description:"what can functional do for you?",author:"Jason Polhemus"}}},pathContext:{}}}});
 //# sourceMappingURL=path---about-82467519f06429106968.js.map
