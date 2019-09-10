@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: '(shatteredaesthetic)',
-    blogTitle: '[codify the chaotic cipher]',
+    blogTitle: '[sound PGMG]',
     author: 'Jason Polhemus',
     description: 'what can functional do for you?',
     siteUrl: 'https://shatteredaesthetic.github.io',
